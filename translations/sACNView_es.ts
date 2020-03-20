@@ -864,12 +864,12 @@ pcap_setfilter falló</translation>
         <translation>En case de cambio, el programa debe ser reiniciado  </translation>
     </message>
     <message>
-        <location filename="../src/preferencesdialog.cpp" line="183"/>
+        <location filename="../src/preferencesdialog.cpp" line="185"/>
         <source>Restart requied</source>
         <translation>Reinicio requerido</translation>
     </message>
     <message>
-        <location filename="../src/preferencesdialog.cpp" line="184"/>
+        <location filename="../src/preferencesdialog.cpp" line="186"/>
         <source>To apply these preferences, you will need to restart the application. 
 sACNView will now close and restart</source>
         <translation>Para aplicar estas preferencias, tiene que reiniciar la programa</translation>
@@ -1006,12 +1006,12 @@ Please ensure IPv6 is disabled</source>
         <translation>Fecha</translation>
     </message>
     <message>
-        <location filename="../src/preferences.h" line="75"/>
+        <location filename="../src/preferences.h" line="76"/>
         <source>Light Theme</source>
         <translation>Modo Claro</translation>
     </message>
     <message>
-        <location filename="../src/preferences.h" line="76"/>
+        <location filename="../src/preferences.h" line="77"/>
         <source>Dark Theme</source>
         <translation>Modo Oscuro</translation>
     </message>

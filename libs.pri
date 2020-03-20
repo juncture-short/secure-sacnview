@@ -60,6 +60,7 @@ macx {
 
     INCLUDEPATH += /usr/local/include/
 
+    # cryptopp in libs folder. Run "make" then "make install"
     LIBS += -L/usr/local/lib/ -lcryptopp
 }
 

@@ -860,12 +860,12 @@ pcap_setfilter failed</source>
         <translation>*Bei Einstellungsänderung Neustart erforderlich  </translation>
     </message>
     <message>
-        <location filename="../src/preferencesdialog.cpp" line="183"/>
+        <location filename="../src/preferencesdialog.cpp" line="185"/>
         <source>Restart requied</source>
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="../src/preferencesdialog.cpp" line="184"/>
+        <location filename="../src/preferencesdialog.cpp" line="186"/>
         <source>To apply these preferences, you will need to restart the application. 
 sACNView will now close and restart</source>
         <translation>Um diese Einstellungen zu speichern, müssen Sie die Software neustarten.
@@ -1003,12 +1003,12 @@ Please ensure IPv6 is disabled</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../src/preferences.h" line="75"/>
+        <location filename="../src/preferences.h" line="76"/>
         <source>Light Theme</source>
         <translation>Helles Thema</translation>
     </message>
     <message>
-        <location filename="../src/preferences.h" line="76"/>
+        <location filename="../src/preferences.h" line="77"/>
         <source>Dark Theme</source>
         <translation>Dunkles Thema</translation>
     </message>
