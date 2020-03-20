@@ -97,6 +97,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent) :
     ui->cbTheme->clear();
     ui->cbTheme->addItems(Preferences::ThemeDescriptions());
     ui->cbTheme->setCurrentIndex(static_cast<int>(Preferences::getInstance()->GetTheme()));
+
+	ui->lePassword->setText(Preferences::getInstance()->GetSecureSacnPassword());
 }
 
 PreferencesDialog::~PreferencesDialog()
@@ -175,6 +177,8 @@ void PreferencesDialog::on_buttonBox_accepted()
         p->SetLocale(m_translation->GetSelectedLocale());
         requiresRestart = true;
     }
+
+	p->SetSecureSacnPassword(ui->lePassword->text());
 
     // Resstart to apply?
     if (requiresRestart) {

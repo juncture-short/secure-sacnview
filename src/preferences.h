@@ -46,6 +46,7 @@ static const QString S_TX_RATE_OVERRIDE("TX Rate Override");
 static const QString S_LOCALE("LOCALE");
 static const QString S_UNIVERSESLISTED("Universe List Count");
 static const QString S_PRIORITYPRESET("PriorityPreset %1");
+static const QString S_SSACNPASSWORD("Secure sACN Password");
 
 struct MDIWindowInfo
 {
@@ -124,6 +125,7 @@ public:
     void SetLocale(QLocale locale);
     void SetUniversesListed(quint8 count) { m_universesListed = (std::max)(count, (quint8)1); }
     void SetPriorityPreset(const QByteArray &data, int index);
+	void SetSecureSacnPassword(QString password) { m_ssACNPassword = password; }
 
     unsigned int GetDisplayFormat();
     unsigned int GetMaxLevel();
@@ -144,6 +146,7 @@ public:
 
     QString GetFormattedValue(unsigned int nLevelInDecimal, bool decorated = false);
     QByteArray GetPriorityPreset(int index);
+	QString GetSecureSacnPassword();
     void savePreferences();
 
     bool RESTART_APP;
@@ -172,6 +175,7 @@ private:
     QLocale m_locale;
     quint8 m_universesListed;
     QByteArray m_priorityPresets[PRIORITYPRESET_COUNT];
+	QString m_ssACNPassword;
 
     void loadPreferences();
 };

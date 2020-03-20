@@ -57,6 +57,10 @@ macx {
     # Breakpad is disabled for MacOS as it has been superceded by Crashpad
     # see https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/6eouc7q2j_g
     DEFINES -= USE_BREAKPAD
+
+    INCLUDEPATH += /usr/local/include/
+
+    LIBS += -L/usr/local/lib/ -lcryptopp
 }
 
 # Firewall Checker

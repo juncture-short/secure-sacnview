@@ -23,7 +23,7 @@ URL = $$shell_quote("https://www.sacnview.org")
 LICENSE = $$shell_quote("Apache 2.0")
 
 macx {
-    QMAKE_MAC_SDK = macosx10.12
+#    QMAKE_MAC_SDK = macosx10.12
     ICON = res/icon.icns
 }
 
@@ -87,6 +87,7 @@ INCLUDEPATH += src src/sacn src/sacn/ACNShare
 
 SOURCES += src/main.cpp\
     src/mdimainwindow.cpp \
+    src/sacn/sacnsecuritytools.cpp \
     src/scopewindow.cpp \
     src/universeview.cpp \
     src/sacn/ACNShare/CID.cpp \
@@ -127,6 +128,7 @@ SOURCES += src/main.cpp\
     src/grideditwidget.cpp
 
 HEADERS += src/mdimainwindow.h \
+    src/sacn/sacnsecuritytools.h \
     src/scopewindow.h \
     src/universeview.h \
     src/sacn/ACNShare/CID.h \

@@ -65,7 +65,7 @@ void InitStreamHeader(quint8* pbuf, const CID &source_cid,
   p += 2;
 
   //root post-amble size
-  PackBUint16(p, RLP_POSTAMBLE_SIZE);                    
+  PackBUint16(p, PATHWAY_POSTAMBLE_SIZE);
   p += 2;
 
   //root ACN packet identifier
@@ -79,7 +79,7 @@ void InitStreamHeader(quint8* pbuf, const CID &source_cid,
   p += 2;
 
   //root vector
-  PackBUint32(p, VECTOR_ROOT_E131_DATA);
+  PackBUint32(p, VECTOR_ROOT_PATHWAY_CONNECTIVITY);
   p += 4;
 
   //root CID
@@ -287,7 +287,7 @@ e_ValidateStreamHeader ValidateStreamHeader(quint8* pbuf, uint buflen, CID &sour
   
   switch (root_vector)
   {
-  case VECTOR_ROOT_E131_DATA:
+  case VECTOR_ROOT_PATHWAY_CONNECTIVITY:
     if (VerifyStreamHeader(pbuf, buflen, source_cid, source_space,
         priority, start_code, reserved, sequence,
         options, universe, slot_count, pdata))

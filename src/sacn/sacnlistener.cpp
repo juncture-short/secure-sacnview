@@ -320,7 +320,7 @@ void sACNListener::processDatagram(QByteArray data, QHostAddress destination, QH
                 ps->priority_wait.SetInterval(WAIT_PRIORITY);
             }
 
-            if((root_vect == VECTOR_ROOT_E131_DATA) && ((options & STREAM_TERMINATED_OPTION) == STREAM_TERMINATED_OPTION))
+			if((root_vect == VECTOR_ROOT_PATHWAY_CONNECTIVITY) && ((options & STREAM_TERMINATED_OPTION) == STREAM_TERMINATED_OPTION))
             {
               //by setting this flag to false, 0xdd packets that may come in while the terminated data
               //packets come in won't reset the priority_wait timer
@@ -475,7 +475,7 @@ void sACNListener::processDatagram(QByteArray data, QHostAddress destination, QH
         }
 
         StreamingACNProtocolVersion protocolVersion = sACNProtocolUnknown;
-        if(root_vect==VECTOR_ROOT_E131_DATA) protocolVersion = sACNProtocolRelease;
+		if(root_vect==VECTOR_ROOT_PATHWAY_CONNECTIVITY) protocolVersion = sACNProtocolRelease;
         if(root_vect==VECTOR_ROOT_E131_DATA_DRAFT) protocolVersion = sACNProtocolDraft;
         if(ps->protocol_version!=protocolVersion)
         {

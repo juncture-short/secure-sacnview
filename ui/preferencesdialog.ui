@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>639</width>
-    <height>452</height>
+    <width>733</width>
+    <height>512</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,7 +23,7 @@
    <iconset resource="../res/resources.qrc">
     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,1,0">
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,0,1,0">
    <property name="sizeConstraint">
     <enum>QLayout::SetMinimumSize</enum>
    </property>
@@ -180,6 +180,30 @@
         </item>
        </layout>
       </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="hlSsACNOptions">
+     <item>
+      <layout class="QVBoxLayout" name="ssACNPass">
+       <item>
+        <widget class="QGroupBox" name="gbSsACNPassword">
+         <property name="title">
+          <string>Secure sACN Password (max 32 characters)</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLineEdit" name="lePassword">
+            <property name="maxLength">
+             <number>32</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>

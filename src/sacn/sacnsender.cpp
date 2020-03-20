@@ -31,6 +31,7 @@
 #include <QCoreApplication>
 
 #include "preferences.h"
+#include "sacnsecuritytools.h"
 
 sACNSentUniverse::sACNSentUniverse(int universe) :
     m_isSending(false),
@@ -40,7 +41,8 @@ sACNSentUniverse::sACNSentUniverse(int universe) :
     m_name("New Source"),
     m_universe(universe),
     m_priorityMode(pmPER_SOURCE_PRIORITY),
-    m_checkTimeoutTimer(Q_NULLPTR)
+	m_checkTimeoutTimer(Q_NULLPTR),
+	m_sequenceType(1)
 {}
 
 sACNSentUniverse::~sACNSentUniverse()
@@ -61,8 +63,10 @@ void sACNSentUniverse::startSending(bool preview)
     quint8 options = 0;
 
     CStreamServer *streamServer = CStreamServer::getInstance();
-    if(m_cid.isNull())
+	if(m_cid.isNull()) {
         m_cid = CID::CreateCid();
+		m_sequenceNumber = 0;
+	}
 
     if (preview)
         options += PREVIEW_DATA_OPTION;
@@ -259,6 +263,7 @@ void sACNSentUniverse::setCID(CID cid)
 {
     if(m_cid==cid) return;
     m_cid = cid;
+	m_sequenceNumber = 0;
     if(m_isSending)
     {
         stopSending();
@@ -428,9 +433,16 @@ void CStreamServer::TickLoop()
                     //Add the sequence number and send
                     quint8 *pseq = GetPSeq(it->cid, it->number);
                     SetStreamHeaderSequence(it->psend, *pseq, it->draft);
+
+					//append the security additions here
+					std::string password = Preferences::getInstance()->GetSecureSacnPassword().toStdString();
+					QByteArray psend((char*)it->psend, it->sendsize);
+					psend = sACNSecurityTools::messageDigest(psend, password, it->sequence_type, it->sequence_number);
+
+					it->sequence_number++;
                     (*pseq)++;
 
-                    quint64 result = m_sendsock->writeDatagram( (char*)it->psend, it->sendsize, it->sendaddr, STREAM_IP_PORT);
+					quint64 result = m_sendsock->writeDatagram( psend.data(), psend.size(), it->sendaddr, STREAM_IP_PORT);
                     if(result!=it->sendsize)
                     {
                         qDebug() << "Error sending datagram : " << m_sendsock->errorString();
@@ -514,6 +526,8 @@ bool CStreamServer::CreateUniverse(const CID& source_cid, const char* source_nam
     m_multiverse[handle].min_interval.SetInterval(1000 / (std::max(send_max_rate, (decltype(send_max_rate))1)));
     m_multiverse[handle].draft = draft;
     m_multiverse[handle].cid = source_cid;
+	m_multiverse[handle].sequence_type = 1; //Magic number for now, 1 = volatile sequence number
+	m_multiverse[handle].sequence_number = 0; //Start from 0
 
     CIPAddr addr;
     GetUniverseAddress(universe, addr);

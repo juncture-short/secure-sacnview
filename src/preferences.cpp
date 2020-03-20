@@ -269,6 +269,8 @@ void Preferences::savePreferences()
         settings.setValue(S_PRIORITYPRESET.arg(i), QVariant(m_priorityPresets[i]));
     }
 
+	settings.setValue(S_SSACNPASSWORD, m_ssACNPassword);
+
     settings.sync();
 }
 
@@ -327,6 +329,8 @@ void Preferences::loadPreferences()
             m_priorityPresets[i] = settings.value(S_PRIORITYPRESET.arg(i)).toByteArray();
         }
     }
+
+	m_ssACNPassword = settings.value(S_SSACNPASSWORD, QString()).toString();
 }
 
 void Preferences::setFlickerFinderShowInfo(bool showIt)
@@ -405,4 +409,9 @@ QByteArray Preferences::GetPriorityPreset(int index)
 {
     Q_ASSERT(index < PRIORITYPRESET_COUNT);
     return m_priorityPresets[index];
+}
+
+QString Preferences::GetSecureSacnPassword()
+{
+	return m_ssACNPassword;
 }

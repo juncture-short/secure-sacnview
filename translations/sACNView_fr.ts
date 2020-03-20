@@ -804,67 +804,72 @@ pcap_setfilter échoué</translation>
         <translation>Décimal (0-255)</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="197"/>
+        <location filename="../ui/preferencesdialog.ui" line="193"/>
+        <source>Secure sACN Password (max 32 characters)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/preferencesdialog.ui" line="221"/>
         <source>Recieve Options</source>
         <translation>Options de réception</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="215"/>
+        <location filename="../ui/preferencesdialog.ui" line="239"/>
         <source>Display Blind/Visualizer Data</source>
         <translation>Afficher données en aveugle/visualiseur</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="228"/>
+        <location filename="../ui/preferencesdialog.ui" line="252"/>
         <source>Display sources with no DMX Data*</source>
         <translation>Afficher les sources sans données DMX*</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="257"/>
+        <location filename="../ui/preferencesdialog.ui" line="281"/>
         <source>Transmit Options</source>
         <translation>Options d&apos;émission</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="269"/>
+        <location filename="../ui/preferencesdialog.ui" line="293"/>
         <source>Default Source Name</source>
         <translation>Nom de source de défaut</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="300"/>
+        <location filename="../ui/preferencesdialog.ui" line="324"/>
         <source>Allow rates to exceed E1.11 (E1.31:2016 6.6.1)*</source>
         <translation>Permettre de dépasser la vitesse E1.11 (E1.31:2016 6.6.1)</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="313"/>
+        <location filename="../ui/preferencesdialog.ui" line="337"/>
         <source>Stop transmitting sACN after</source>
         <translation>Arrêter de transmettre du sACN après</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="355"/>
+        <location filename="../ui/preferencesdialog.ui" line="379"/>
         <source>Hours</source>
         <translation>heures</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="393"/>
+        <location filename="../ui/preferencesdialog.ui" line="417"/>
         <source>Minutes</source>
         <translation>minutes</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="431"/>
+        <location filename="../ui/preferencesdialog.ui" line="455"/>
         <source>Seconds</source>
         <translation>secondes</translation>
     </message>
     <message>
-        <location filename="../ui/preferencesdialog.ui" line="478"/>
+        <location filename="../ui/preferencesdialog.ui" line="502"/>
         <source>*Application restart required on change  </source>
         <translation>*Redémarrage requis en cas de changement  </translation>
     </message>
     <message>
-        <location filename="../src/preferencesdialog.cpp" line="181"/>
+        <location filename="../src/preferencesdialog.cpp" line="183"/>
         <source>Restart requied</source>
         <translation>Redémarrage requis</translation>
     </message>
     <message>
-        <location filename="../src/preferencesdialog.cpp" line="182"/>
+        <location filename="../src/preferencesdialog.cpp" line="184"/>
         <source>To apply these preferences, you will need to restart the application. 
 sACNView will now close and restart</source>
         <translation>Pour appliquer ces préférences,l&apos;application doit redémarrer.
@@ -874,14 +879,12 @@ sACN va se fermer et redémarrer maintenant</translation>
 <context>
     <name>QObject</name>
     <message>
-        <source>This binary is intended for Windows XP only
-There are major issues mixed IPv4 and IPv6 enviroments
-
+        <location filename="../src/main.cpp" line="82"/>
+        <source>This binary is intended for Windows XP only<byte value="xd"/>
+There are major issues mixed IPv4 and IPv6 enviroments<byte value="xd"/>
+<byte value="xd"/>
 Please ensure IPv6 is disabled</source>
-        <translation type="vanished">Ce binaire est prévu seulement pour Windows XP
-Il y a des gros problèmes concernant les environnements mixtes IPv4 et IPv6
-
-Veuillez assurez que IPv6 est désactivé</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="86"/>
@@ -1039,16 +1042,16 @@ Veuillez assurez que IPv6 est désactivé</translation>
         <translation>Inconnu</translation>
     </message>
     <message>
-        <source>Failed to start logging to file
+        <location filename="../src/logwindow.cpp" line="255"/>
+        <source>Failed to start logging to file<byte value="xd"/>
 Error %1</source>
-        <translation type="vanished">Impossible de créer un fichier log
-Erreur %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This binary is intended for Windows XP only
+        <location filename="../src/xpwarning.h" line="14"/>
+        <source>This binary is intended for Windows XP only<byte value="xd"/>
 This feature is unavailable</source>
-        <translation type="vanished">Ce binaire est prévu seulement pour Windows XP
-Ce fonctionnalité est indisponible</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1417,20 +1420,15 @@ Ce fonctionnalité est indisponible</translation>
         <translation>Pas de DMX</translation>
     </message>
     <message>
-        <source>Errors binding to interface
-
-Results will be inaccurate
-Possible reasons include permission issues
-or other applications
-
+        <location filename="../src/universeview.cpp" line="121"/>
+        <source>Errors binding to interface<byte value="xd"/>
+<byte value="xd"/>
+Results will be inaccurate<byte value="xd"/>
+Possible reasons include permission issues<byte value="xd"/>
+or other applications<byte value="xd"/>
+<byte value="xd"/>
 See diagnostics for more info</source>
-        <translation type="vanished">Liaison a l&apos;interface impossible
-
-Les résultats seront inexacts
-Raisons possibles: problèmes de permission
-ou autres applications
-
-Voir la fenêtre diagnostique pour plus d&apos;informations</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/universeview.cpp" line="320"/>
@@ -1609,20 +1607,18 @@ pcap_setfilter échoué</translation>
 <context>
     <name>sACNManager</name>
     <message>
-        <source>Unable to allocate listener object
-
+        <location filename="../src/sacn/streamingacn.cpp" line="145"/>
+        <source>Unable to allocate listener object<byte value="xd"/>
+<byte value="xd"/>
 sACNView must close now</source>
-        <translation type="vanished">Unable to allocate listener object
-
-sACNView must close now</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to allocate sender object
-
+        <location filename="../src/sacn/streamingacn.cpp" line="218"/>
+        <source>Unable to allocate sender object<byte value="xd"/>
+<byte value="xd"/>
 sACNView must close now</source>
-        <translation type="vanished">Unable to allocate sender object
-
-sACNView must close now</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

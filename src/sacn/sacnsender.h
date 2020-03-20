@@ -191,6 +191,10 @@ private:
     StreamingACNProtocolVersion m_version;
     // Timer to shutdown after timeout
     QTimer *m_checkTimeoutTimer;
+	// Pathway Secure sACN sequence type
+	quint8 m_sequenceType;
+	// Pathway Secure sACN sequence number
+	quint64 m_sequenceNumber;
 };
 
 //These definitions are to be used with the send_intervalms parameter of CreateUniverse
@@ -319,6 +323,8 @@ private:
         QHostAddress sendaddr;      //The multicast address we're sending to
         bool draft;                 //Draft or released sACN
         CID cid;                    // The CID
+		quint8 sequence_type;		// Pathway Secure sACN sequence type
+		quint64 sequence_number;	// Pathway Secure sACN sequence number
 
         //and the constructor
       universe():number(0),handle(0), num_terminates(0), psend(NULL),isdirty(false),
