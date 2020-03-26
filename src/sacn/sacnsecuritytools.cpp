@@ -18,6 +18,7 @@
 
 #include <cryptopp/blake2.h>
 
+//-----------------------------------------------------------------------------
 sACNSecurityTools::sACNSecurityTools()
 {
 
@@ -26,17 +27,20 @@ sACNSecurityTools::sACNSecurityTools()
 //-----------------------------------------------------------------------------
 std::string sACNSecurityTools::getKeyFingerprint(std::string key) {
 	std::string digest;
-	CryptoPP::BLAKE2s hash;
+	CryptoPP::BLAKE2s hash(Q_NULLPTR, 0, Q_NULLPTR, 0, Q_NULLPTR, 0, false, KeyFingerprintSize);
 	hash.Update((const CryptoPP::byte*)key.data(), key.size());
-	digest.resize(KeyFingerprintSize);
-	hash.TruncatedFinal((CryptoPP::byte*)&digest[0], KeyFingerprintSize);
+	digest.resize(hash.DigestSize());
+	hash.Final((CryptoPP::byte*)&digest[0]);
 
 	return digest;
 }
 
 //-----------------------------------------------------------------------------
-QByteArray sACNSecurityTools::messageDigest(QByteArray message, std::string pass, quint8 sequenceType, quint64 sequenceNumber) {
-	quint64 sequenceNumberMask = (1l << (7*8)) - 1; //We only want the first 7 bytes if the 8 Byte value
+QByteArray sACNSecurityTools::messageDigest(QByteArray message, QString password, quint8 sequenceType, quint64 sequenceNumber) {
+	std::string pass(password.toStdString());
+	pass.resize(32, 0);
+
+	quint64 sequenceNumberMask = (1l << (7*8)) - 1; //We only want the first 7 bytes of the 8 Byte value
 	sequenceNumber &= sequenceNumberMask;
 	quint64 sequence = (static_cast<quint64>(sequenceType) << (7*8)) + sequenceNumber;
 
@@ -48,12 +52,30 @@ QByteArray sACNSecurityTools::messageDigest(QByteArray message, std::string pass
 	stream << sequence;
 
 	std::string digest;
-	CryptoPP::BLAKE2s hash((const CryptoPP::byte*) key.data(), key.size());
+	CryptoPP::BLAKE2s hash((const CryptoPP::byte*) pass.data(), pass.size(), Q_NULLPTR, 0, Q_NULLPTR, 0, false, KeyFingerprintSize);
 	hash.Update((const CryptoPP::byte*)message.data(), message.size());
 	digest.resize(MessageDigestSize);
-	hash.TruncatedFinal((CryptoPP::byte*)&digest[0], MessageDigestSize);
+	hash.Final((CryptoPP::byte*)&digest[0]);
 
 	stream.writeRawData(digest.c_str(), digest.size());
 
 	return message;
+}
+
+//-----------------------------------------------------------------------------
+bool sACNSecurityTools::verifyPacket(QByteArray packet, QString password) {
+	bool verified = false;
+
+	std::string pass(password.toStdString());
+	pass.resize(32, 0);
+
+	//split packet into the message and the digest
+	QByteArray message = packet.chopped(MessageDigestSize);
+	QByteArray digest = packet.right(MessageDigestSize);
+
+	CryptoPP::BLAKE2s hash((const CryptoPP::byte*) pass.data(), pass.size(), Q_NULLPTR, 0, Q_NULLPTR, 0, false, MessageDigestSize);
+	hash.Update((const CryptoPP::byte*)message.data(), message.size());
+	verified = hash.Verify((const CryptoPP::byte*)digest.data());
+
+	return verified;
 }

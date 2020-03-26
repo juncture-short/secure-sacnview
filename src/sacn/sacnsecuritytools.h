@@ -24,12 +24,15 @@ class sACNSecurityTools
 {
 public:
 	static const int KeyFingerprintSize = 4;
+	static const int passwordSize = 32;
 	static const int MessageDigestSize = 16;
 
 	sACNSecurityTools();
 
 	static std::string getKeyFingerprint(std::string key);
-	static QByteArray messageDigest(QByteArray message, std::string pass, quint8 sequenceType, quint64 sequenceNumber);
+	static QByteArray messageDigest(QByteArray message, QString password, quint8 sequenceType, quint64 sequenceNumber);
+
+	static bool verifyPacket(QByteArray packet, QString password);
 };
 
 #endif // SACNSECURITYTOOLS_H

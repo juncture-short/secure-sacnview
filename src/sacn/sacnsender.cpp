@@ -435,7 +435,7 @@ void CStreamServer::TickLoop()
                     SetStreamHeaderSequence(it->psend, *pseq, it->draft);
 
 					//append the security additions here
-					std::string password = Preferences::getInstance()->GetSecureSacnPassword().toStdString();
+					QString password = Preferences::getInstance()->GetSecureSacnPassword();
 					QByteArray psend((char*)it->psend, it->sendsize);
 					psend = sACNSecurityTools::messageDigest(psend, password, it->sequence_type, it->sequence_number);
 

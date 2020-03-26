@@ -334,6 +334,12 @@ bool VerifyStreamHeader(quint8* pbuf, uint buflen, CID &source_cid,
   {
       return false;
   }
+
+  //Check if the postamble size is correct Pathway AUTH size
+  if (UpackBUint16(pbuf + POSTAMBLE_SIZE_ADDR) != PATHWAY_POSTAMBLE_SIZE) {
+	  return false;
+  }
+
   if(memcmp(pbuf 
 	    + ACN_IDENTIFIER_ADDR, ACN_IDENTIFIER, ACN_IDENTIFIER_SIZE) != 0)
   {
@@ -383,7 +389,7 @@ bool VerifyStreamHeader(quint8* pbuf, uint buflen, CID &source_cid,
   pdata = pbuf + STREAM_HEADER_SIZE;
   
   /*Do final length validation*/
-  if((pdata + slot_count) > (pbuf + buflen))
+  if((pdata + slot_count) > (pbuf + buflen - PATHWAY_POSTAMBLE_SIZE))
     return false;
   
   return true;

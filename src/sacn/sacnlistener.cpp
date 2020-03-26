@@ -18,6 +18,7 @@
 #include "preferences.h"
 #include "defpack.h"
 #include "preferences.h"
+#include "sacnsecuritytools.h"
 #include <QDebug>
 #include <QThread>
 #include <QPoint>
@@ -239,6 +240,9 @@ void sACNListener::processDatagram(QByteArray data, QHostAddress destination, QH
     quint8* pdata;
     char source_name [SOURCE_NAME_SIZE];
     quint8 priority;
+	bool auth = true;
+	quint8 sequenceType;
+	quint64 sequenceNumber;
     /*
      * These only apply to the ratified version of the spec, so we will hardwire
      * them to be 0 just in case they never get set.
@@ -264,6 +268,13 @@ void sACNListener::processDatagram(QByteArray data, QHostAddress destination, QH
     default:
         break;
     }
+
+	QString pass = Preferences::getInstance()->GetSecureSacnPassword();
+	if (!sACNSecurityTools::verifyPacket(data, pass)) {
+		auth = false;
+		qDebug() << "sACNListener" << QThread::currentThreadId() << ": Source coming up,  authentication invalid";
+		return;
+	}
 
     // Unpacks a uint4 from a known big endian buffer
     int root_vect = UpackBUint32((quint8*)pbuf + ROOT_VECTOR_ADDR);
