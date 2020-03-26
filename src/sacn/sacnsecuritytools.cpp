@@ -52,7 +52,7 @@ QByteArray sACNSecurityTools::messageDigest(QByteArray message, QString password
 	stream << sequence;
 
 	std::string digest;
-	CryptoPP::BLAKE2s hash((const CryptoPP::byte*) pass.data(), pass.size(), Q_NULLPTR, 0, Q_NULLPTR, 0, false, KeyFingerprintSize);
+	CryptoPP::BLAKE2s hash((const CryptoPP::byte*) pass.data(), pass.size(), Q_NULLPTR, 0, Q_NULLPTR, 0, false, MessageDigestSize);
 	hash.Update((const CryptoPP::byte*)message.data(), message.size());
 	digest.resize(MessageDigestSize);
 	hash.Final((CryptoPP::byte*)&digest[0]);
