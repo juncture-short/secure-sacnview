@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>sACNView</string>
+   <string>Secure sACNView</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QSpinBox {

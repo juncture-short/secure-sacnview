@@ -18,8 +18,8 @@
 
 #include <QColor>
 
-#define APP_NAME        "sACNView"
-#define AUTHOR          "Tom Barthel-Steer\r\nMarcus Birkin\r\nHans Hinrichsen\r\nMatt Kerr"
+#define APP_NAME        "Pathway Secure sACNView"
+#define AUTHOR          "Tom Barthel-Steer\r\nMarcus Birkin\r\nHans Hinrichsen\r\nMatt Kerr\r\nScott McKay"
 
 // If this is a full release, only show the newer version message for other full releases
 // If this is prerelease, show all newer versions
@@ -45,7 +45,7 @@
 
 #define MAX_SACN_TRANSMIT_TIME_SEC  1000000
 
-#define DEFAULT_SOURCE_NAME "sACNView"
+#define DEFAULT_SOURCE_NAME "Secure sACNView"
 #define MAX_SOURCE_NAME_LEN 63
 
 

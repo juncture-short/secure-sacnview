@@ -16,10 +16,10 @@
 QT       += core gui network multimedia
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = sACNView
+TARGET = ssACNView
 TEMPLATE = app
-DESCRIPTION = $$shell_quote("A tool for sending and receiving the Streaming ACN control protocol")
-URL = $$shell_quote("https://www.sacnview.org")
+DESCRIPTION = $$shell_quote("A tool for sending and receiving the Pathway Secure Streaming ACN control protocol, Based on sACNView")
+URL = $$shell_quote("https://www.pathwayconnect.com")
 LICENSE = $$shell_quote("Apache 2.0")
 
 macx {

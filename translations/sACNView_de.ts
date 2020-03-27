@@ -352,11 +352,6 @@
 <context>
     <name>MDIMainWindow</name>
     <message>
-        <location filename="../ui/mdimainwindow.ui" line="14"/>
-        <source>sACNView</source>
-        <translation>sACNView</translation>
-    </message>
-    <message>
         <location filename="../ui/mdimainwindow.ui" line="110"/>
         <source>Universe List</source>
         <translation>Universenliste</translation>
@@ -371,6 +366,11 @@
         <location filename="../ui/mdimainwindow.ui" line="148"/>
         <source>Start at Universe</source>
         <translation>Beginnen bei Universum</translation>
+    </message>
+    <message>
+        <location filename="../ui/mdimainwindow.ui" line="14"/>
+        <source>Secure sACNView</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/mdimainwindow.ui" line="136"/>
