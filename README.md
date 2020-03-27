@@ -1,3 +1,5 @@
+# Secure sACNView 
+
 This is a Fork of sACNView implementing the Pathway Connectivity Secure sACN protocol. We intend this tool to be used as a development aid for those wishing to implement "Secure sACN" in their own products. As this is a targeted development tool we have removed support for "normal" sACN and only support our secured variant.
 
 
