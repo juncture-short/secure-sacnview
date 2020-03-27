@@ -296,11 +296,6 @@ e_ValidateStreamHeader ValidateStreamHeader(quint8* pbuf, uint buflen, CID &sour
         return e_ValidateStreamHeader::SteamHeader_Invalid;
 
   case VECTOR_ROOT_E131_DATA_DRAFT:
-    if (VerifyStreamHeaderForDraft(pbuf, buflen, source_cid,
-        source_space, priority, start_code,
-        sequence, universe, slot_count, pdata))
-        return e_ValidateStreamHeader::SteamHeader_Draft;
-    else
         return e_ValidateStreamHeader::SteamHeader_Invalid;
 
   case VECTOR_ROOT_E131_EXTENDED:
