@@ -1,4 +1,6 @@
-# sACNView [![Build Status](https://travis-ci.org/docsteer/sacnview.svg?branch=2.1-dev)](https://travis-ci.org/docsteer/sacnview) [![Build status](https://ci.appveyor.com/api/projects/status/p8hmic8x2s6051o0?svg=true)](https://ci.appveyor.com/project/docsteer/sacnview)
+This is a Fork of sACNView implementing the Pathway Connectivity Secure sACN protocol. We intend this tool to be used as a development aid for those wishing to implement "Secure sACN" in their own products. As this is a targeted development tool we have removed support for "normal" sACN and only support our secured variant.
+
+
 
 sACNView is a tool for viewing, monitoring and testing the ANSI/ESTA E1.17 protcol, informally known as "Streaming ACN".
 
@@ -23,13 +25,16 @@ The application uses a couple of external libraries:
 
 * Google Breakpad for crash reporting
 * LibPCAP for captured packet playback
+* Crypto++ for cryptographic functions required by Secure sACN additions
 
 You need to acquire the Breakpad library by using the git `submodule` command
 
-1. Clone the repository (`git clone https://github.com/docsteer/sacnview.git`)
+1. Clone the repository (`git clone https://github.com/juncture-short/sacnview.git`)
 2. Switch to the directory (`cd sacnview`)
 3. Initialize the submodules (`git submodule init`)
 4. Download the submodule (`git submodule update`)
+
+Make sure to install Crypto++ development libraries (source included in libs folder)
 
 After that, to build, open the .PRO file in the root directory and build with Qt Creator
 
