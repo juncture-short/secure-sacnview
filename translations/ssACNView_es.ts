@@ -924,16 +924,10 @@ sACNView will now close and restart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/logwindow.cpp" line="255"/>
-        <source>Failed to start logging to file<byte value="xd"/>
-Error %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/main.cpp" line="82"/>
-        <source>This binary is intended for Windows XP only<byte value="xd"/>
-There are major issues mixed IPv4 and IPv6 enviroments<byte value="xd"/>
-<byte value="xd"/>
+        <source>This binary is intended for Windows XP only
+There are major issues mixed IPv4 and IPv6 enviroments
+
 Please ensure IPv6 is disabled</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1043,8 +1037,14 @@ Please ensure IPv6 is disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/logwindow.cpp" line="255"/>
+        <source>Failed to start logging to file
+Error %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/xpwarning.h" line="14"/>
-        <source>This binary is intended for Windows XP only<byte value="xd"/>
+        <source>This binary is intended for Windows XP only
 This feature is unavailable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1394,12 +1394,12 @@ This feature is unavailable</source>
     </message>
     <message>
         <location filename="../src/universeview.cpp" line="121"/>
-        <source>Errors binding to interface<byte value="xd"/>
-<byte value="xd"/>
-Results will be inaccurate<byte value="xd"/>
-Possible reasons include permission issues<byte value="xd"/>
-or other applications<byte value="xd"/>
-<byte value="xd"/>
+        <source>Errors binding to interface
+
+Results will be inaccurate
+Possible reasons include permission issues
+or other applications
+
 See diagnostics for more info</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1596,15 +1596,15 @@ pcap_setfilter failed</source>
     <name>sACNManager</name>
     <message>
         <location filename="../src/sacn/streamingacn.cpp" line="145"/>
-        <source>Unable to allocate listener object<byte value="xd"/>
-<byte value="xd"/>
+        <source>Unable to allocate listener object
+
 sACNView must close now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/sacn/streamingacn.cpp" line="218"/>
-        <source>Unable to allocate sender object<byte value="xd"/>
-<byte value="xd"/>
+        <source>Unable to allocate sender object
+
 sACNView must close now</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1656,304 +1656,299 @@ sACNView must close now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="215"/>
-        <source>Draft</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/transmitwindow.ui" line="236"/>
+        <location filename="../ui/transmitwindow.ui" line="220"/>
         <source>Source Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="268"/>
+        <location filename="../ui/transmitwindow.ui" line="252"/>
         <source>Universe:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="291"/>
+        <location filename="../ui/transmitwindow.ui" line="275"/>
         <source>Slot Count</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="320"/>
+        <location filename="../ui/transmitwindow.ui" line="304"/>
         <source>Priority Mode:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="333"/>
+        <location filename="../ui/transmitwindow.ui" line="317"/>
         <source>Per-Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="338"/>
+        <location filename="../ui/transmitwindow.ui" line="322"/>
         <source>Per-Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="367"/>
+        <location filename="../ui/transmitwindow.ui" line="351"/>
         <source>Set up per-channel priorities</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="370"/>
-        <location filename="../ui/transmitwindow.ui" line="1693"/>
-        <location filename="../ui/transmitwindow.ui" line="1707"/>
+        <location filename="../ui/transmitwindow.ui" line="354"/>
+        <location filename="../ui/transmitwindow.ui" line="1677"/>
+        <location filename="../ui/transmitwindow.ui" line="1691"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="388"/>
+        <location filename="../ui/transmitwindow.ui" line="372"/>
         <source>Priority:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="416"/>
+        <location filename="../ui/transmitwindow.ui" line="400"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="444"/>
+        <location filename="../ui/transmitwindow.ui" line="428"/>
         <source>Unicast to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="460"/>
+        <location filename="../ui/transmitwindow.ui" line="444"/>
         <source>Multicast to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="482"/>
+        <location filename="../ui/transmitwindow.ui" line="466"/>
         <source>Blind-mode data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="511"/>
-        <location filename="../ui/transmitwindow.ui" line="543"/>
+        <location filename="../ui/transmitwindow.ui" line="495"/>
+        <location filename="../ui/transmitwindow.ui" line="527"/>
         <location filename="../src/transmitwindow.cpp" line="313"/>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="532"/>
+        <location filename="../ui/transmitwindow.ui" line="516"/>
         <source>Faders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="552"/>
+        <location filename="../ui/transmitwindow.ui" line="536"/>
         <source>Start at :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="575"/>
+        <location filename="../ui/transmitwindow.ui" line="559"/>
         <source>Presets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="656"/>
+        <location filename="../ui/transmitwindow.ui" line="640"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="686"/>
+        <location filename="../ui/transmitwindow.ui" line="670"/>
         <source>THRU</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="716"/>
+        <location filename="../ui/transmitwindow.ui" line="700"/>
         <source>+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="750"/>
+        <location filename="../ui/transmitwindow.ui" line="734"/>
         <source>7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="780"/>
+        <location filename="../ui/transmitwindow.ui" line="764"/>
         <source>8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="810"/>
+        <location filename="../ui/transmitwindow.ui" line="794"/>
         <source>9</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="840"/>
+        <location filename="../ui/transmitwindow.ui" line="824"/>
         <source>4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="870"/>
+        <location filename="../ui/transmitwindow.ui" line="854"/>
         <source>5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="900"/>
+        <location filename="../ui/transmitwindow.ui" line="884"/>
         <source>6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="930"/>
+        <location filename="../ui/transmitwindow.ui" line="914"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="960"/>
+        <location filename="../ui/transmitwindow.ui" line="944"/>
         <source>3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="990"/>
+        <location filename="../ui/transmitwindow.ui" line="974"/>
         <source>2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1020"/>
-        <location filename="../ui/transmitwindow.ui" line="1756"/>
+        <location filename="../ui/transmitwindow.ui" line="1004"/>
+        <location filename="../ui/transmitwindow.ui" line="1740"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1050"/>
+        <location filename="../ui/transmitwindow.ui" line="1034"/>
         <source>CLEAR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1080"/>
+        <location filename="../ui/transmitwindow.ui" line="1064"/>
         <source>ENTER</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1116"/>
+        <location filename="../ui/transmitwindow.ui" line="1100"/>
         <source>AT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1146"/>
+        <location filename="../ui/transmitwindow.ui" line="1130"/>
         <source>ALL OFF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1176"/>
+        <location filename="../ui/transmitwindow.ui" line="1160"/>
         <source>FULL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1206"/>
+        <location filename="../ui/transmitwindow.ui" line="1190"/>
         <source>OFFSET</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1223"/>
+        <location filename="../ui/transmitwindow.ui" line="1207"/>
         <source>Channel Check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1288"/>
+        <location filename="../ui/transmitwindow.ui" line="1272"/>
         <source>Previous</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1333"/>
+        <location filename="../ui/transmitwindow.ui" line="1317"/>
         <source>Blink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1393"/>
+        <location filename="../ui/transmitwindow.ui" line="1377"/>
         <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1403"/>
+        <location filename="../ui/transmitwindow.ui" line="1387"/>
         <source>Fade Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1459"/>
+        <location filename="../ui/transmitwindow.ui" line="1443"/>
         <source>thru</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1512"/>
+        <location filename="../ui/transmitwindow.ui" line="1496"/>
         <source>Effect Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1521"/>
+        <location filename="../ui/transmitwindow.ui" line="1505"/>
         <source>Manual</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1534"/>
-        <location filename="../ui/transmitwindow.ui" line="1589"/>
+        <location filename="../ui/transmitwindow.ui" line="1518"/>
+        <location filename="../ui/transmitwindow.ui" line="1573"/>
         <source>Sinewave</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1544"/>
-        <location filename="../ui/transmitwindow.ui" line="1602"/>
+        <location filename="../ui/transmitwindow.ui" line="1528"/>
+        <location filename="../ui/transmitwindow.ui" line="1586"/>
         <source>Ramp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1554"/>
+        <location filename="../ui/transmitwindow.ui" line="1538"/>
         <source>Chase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1579"/>
+        <location filename="../ui/transmitwindow.ui" line="1563"/>
         <source>Snap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1612"/>
+        <location filename="../ui/transmitwindow.ui" line="1596"/>
         <source>Vertical Bars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1619"/>
+        <location filename="../ui/transmitwindow.ui" line="1603"/>
         <source>Horizontal Bars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1629"/>
+        <location filename="../ui/transmitwindow.ui" line="1613"/>
         <source>Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1639"/>
+        <location filename="../ui/transmitwindow.ui" line="1623"/>
         <source>Date/Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1662"/>
+        <location filename="../ui/transmitwindow.ui" line="1646"/>
         <source>Speed - 1Hz</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1783"/>
+        <location filename="../ui/transmitwindow.ui" line="1767"/>
         <source>Text to Scroll</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1808"/>
+        <location filename="../ui/transmitwindow.ui" line="1792"/>
         <source>sACN!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1857"/>
+        <location filename="../ui/transmitwindow.ui" line="1841"/>
         <source>EU Date Format (dd/mm/yy)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1867"/>
+        <location filename="../ui/transmitwindow.ui" line="1851"/>
         <source>US Date Format (mm/ddd/yy)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/transmitwindow.ui" line="1897"/>
+        <location filename="../ui/transmitwindow.ui" line="1881"/>
         <source>Grid Control</source>
         <translation type="unfinished"></translation>
     </message>

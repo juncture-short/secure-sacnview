@@ -40,7 +40,7 @@ QByteArray sACNSecurityTools::messageDigest(QByteArray message, QString password
 	std::string pass(password.toStdString());
 	pass.resize(32, 0);
 
-	quint64 sequenceNumberMask = (1l << (7*8)) - 1; //We only want the first 7 bytes of the 8 Byte value
+	quint64 sequenceNumberMask = ((quint64)1 << (7*8)) - 1; //We only want the first 7 bytes of the 8 Byte value
 	sequenceNumber &= sequenceNumberMask;
 	quint64 sequence = (static_cast<quint64>(sequenceType) << (7*8)) + sequenceNumber;
 
@@ -70,7 +70,7 @@ bool sACNSecurityTools::verifyPacket(QByteArray packet, QString password) {
 	pass.resize(32, 0);
 
 	//split packet into the message and the digest
-	QByteArray message = packet.chopped(MessageDigestSize);
+	QByteArray message = packet.left(packet.size() - MessageDigestSize);
 	QByteArray digest = packet.right(MessageDigestSize);
 
 	CryptoPP::BLAKE2s hash((const CryptoPP::byte*) pass.data(), pass.size(), Q_NULLPTR, 0, Q_NULLPTR, 0, false, MessageDigestSize);

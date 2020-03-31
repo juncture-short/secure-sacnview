@@ -1,4 +1,5 @@
 LIBS_PATH = $$system_path($${_PRO_FILE_PWD_}/libs)
+INCLUDEPATH += $${LIBS_PATH}
 
 # Breakpad
 BREAKPAD_PATH = $$system_path($${LIBS_PATH}/breakpad)
@@ -57,11 +58,6 @@ macx {
     # Breakpad is disabled for MacOS as it has been superceded by Crashpad
     # see https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/6eouc7q2j_g
     DEFINES -= USE_BREAKPAD
-
-    INCLUDEPATH += /usr/local/include/
-
-    # cryptopp in libs folder. Run "make" then "make install"
-    LIBS += -L/usr/local/lib/ -lcryptopp
 }
 
 # Firewall Checker
@@ -119,4 +115,19 @@ win32 {
     } else {
         OPENSSL_PATH = $${_PRO_FILE_PWD_}/libs/openssl-$${OPENSSL_VERS}-x64_86-win64
     }
+}
+
+# Cryptopp
+win32 {
+    CONFIG(release, debug|release)  {
+        LIBS += -L$${LIBS_PATH}/cryptopp/x64/Output/Release -lcryptlib
+    }
+    CONFIG(debug, debug|release)  {
+        LIBS += -L$${LIBS_PATH}/cryptopp/x64/Output/Debug -lcryptlib
+    }
+}
+
+macx {
+    # cryptopp in libs folder. Run "make"
+    LIBS += -L$${LIBS_PATH}/cryptopp -lcryptopp
 }
