@@ -16,10 +16,10 @@
 
 SetCompressor /SOLID lzma
 
-!define PRODUCT_NAME "sACNView"
-!define PRODUCT_PUBLISHER "Tom Barthel-Steer"
-!define PRODUCT_WEB_SITE "https://www.sacnview.org"
-!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\sACNView.exe"
+!define PRODUCT_NAME "ssACNView"
+!define PRODUCT_PUBLISHER "Pathway Connectivity"
+!define PRODUCT_WEB_SITE "https://www.pathwayconnect.com"
+!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\ssACNView.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 
@@ -68,7 +68,7 @@ Section CheckAdmin
 isNotAdmin:
 	DetailPrint "Missing Administrator Rights !!!"
 	messageBox MB_OK "You do not have Administrator rights on this computer.$\r$\r\
-Please log in as an administrator to install sACNView."
+Please log in as an administrator to install Secure sACNView."
 	quit
 isAdmin:
 	DetailPrint "Administrator Rights granted"
@@ -108,7 +108,7 @@ Section "Main Application" sec01
 	
 	;Shortcuts
 	CreateDirectory '$SMPROGRAMS\${PRODUCT_NAME}'
-	CreateShortcut '$SMPROGRAMS\${PRODUCT_NAME}\sACNView.lnk' '$INSTDIR\sACNView.exe'
+	CreateShortcut '$SMPROGRAMS\${PRODUCT_NAME}\ssACNView.lnk' '$INSTDIR\ssACNView.exe'
 	;create shortcut for uninstaller always use ${UNINST_EXE} instead of uninstall.exe
 	CreateShortcut '$SMPROGRAMS\${PRODUCT_NAME}\uninstall.lnk' '${UNINST_EXE}'
 
@@ -119,7 +119,7 @@ Section "Main Application" sec01
 	;Same as create shortcut you need to use ${UNINST_EXE} instead of anything else.
 	WriteRegStr ${INSTDIR_REG_ROOT} "${INSTDIR_REG_KEY}" "UninstallString" "${UNINST_EXE}"
 
-	SimpleFC::AddApplication "sACNView" "$INSTDIR\sACNView.exe" 0 2 "" 1
+	SimpleFC::AddApplication "ssACNView" "$INSTDIR\ssACNView.exe" 0 2 "" 1
 	Pop $0
 	
 	IntCmp $0 0 fw_ok
@@ -141,12 +141,12 @@ Function .onInit
 		;check the Windows version
 		${If} ${TARGET_WINXP} == '1'
 			${IfNot} ${IsWinXP}
-			MessageBox MB_OK "Windows XP is required to run this special build of sACNView"
+			MessageBox MB_OK "Windows XP is required to run this special build of Secure sACNView"
 			Quit
 			${EndIf}
 		${Else}
 			${IfNot} ${AtLeastWin7}
-			MessageBox MB_OK "Windows 7 or above is required to run sACNView"
+			MessageBox MB_OK "Windows 7 or above is required to run Secure sACNView"
 			Quit
 			${EndIf}
 		${EndIf}
