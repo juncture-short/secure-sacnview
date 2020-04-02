@@ -13,7 +13,7 @@ This protocol is used in lighting systems (typically theatre, television, live e
 This is sACNView mark 2. The original program was written in Borland Delphi, but this new version supplants it. It is written in C++, using the Qt library and sACN reception code from [Electronic Theatre Controls](http://www.etcconnect.com).
 
 # Installation
-If you are interested in simply using the program, visit the [product web site](http://docsteer.github.io/sacnview/) to download installers for your platform (Linux, Mac or Windows OS).
+If you are interested in simply using the program, visit the [product web site](https://pathwayconnect.com/index.php/products/software/228-secure-streaming-acn-ssacn) to download installers for your platform (Linux, Mac or Windows OS).
 
 # Building
 If you are interested in building the application you will need the following:
