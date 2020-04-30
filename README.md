@@ -31,7 +31,7 @@ The application uses a couple of external libraries:
 
 You need to acquire the Breakpad library by using the git `submodule` command
 
-1. Clone the repository (`git clone https://github.com/juncture-short/sacnview.git`)
+1. Clone the repository (`git clone https://github.com/Pathway-Connectivity/secure-sacnview.git`)
 2. Switch to the directory (`cd sacnview`)
 3. Initialize the submodules (`git submodule init`)
 4. Download the submodule (`git submodule update`)
