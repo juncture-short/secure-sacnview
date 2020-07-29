@@ -2,6 +2,7 @@
 #include <QPainter>
 #include <QStyleOptionComplex>
 #include "darkstyle.h"
+#include <QPainterPath>
 
 
 static void qt_fusion_draw_mdibutton(QPainter *painter, const QStyleOptionTitleBar *option, const QRect &tmp, bool hover, bool sunken)

@@ -925,9 +925,9 @@ sACNView will now close and restart</source>
     </message>
     <message>
         <location filename="../src/main.cpp" line="82"/>
-        <source>This binary is intended for Windows XP only
-There are major issues mixed IPv4 and IPv6 enviroments
-
+        <source>This binary is intended for Windows XP only<byte value="xd"/>
+There are major issues mixed IPv4 and IPv6 enviroments<byte value="xd"/>
+<byte value="xd"/>
 Please ensure IPv6 is disabled</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1038,13 +1038,13 @@ Please ensure IPv6 is disabled</source>
     </message>
     <message>
         <location filename="../src/logwindow.cpp" line="255"/>
-        <source>Failed to start logging to file
+        <source>Failed to start logging to file<byte value="xd"/>
 Error %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/xpwarning.h" line="14"/>
-        <source>This binary is intended for Windows XP only
+        <source>This binary is intended for Windows XP only<byte value="xd"/>
 This feature is unavailable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1394,12 +1394,12 @@ This feature is unavailable</source>
     </message>
     <message>
         <location filename="../src/universeview.cpp" line="121"/>
-        <source>Errors binding to interface
-
-Results will be inaccurate
-Possible reasons include permission issues
-or other applications
-
+        <source>Errors binding to interface<byte value="xd"/>
+<byte value="xd"/>
+Results will be inaccurate<byte value="xd"/>
+Possible reasons include permission issues<byte value="xd"/>
+or other applications<byte value="xd"/>
+<byte value="xd"/>
 See diagnostics for more info</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1596,15 +1596,15 @@ pcap_setfilter failed</source>
     <name>sACNManager</name>
     <message>
         <location filename="../src/sacn/streamingacn.cpp" line="145"/>
-        <source>Unable to allocate listener object
-
+        <source>Unable to allocate listener object<byte value="xd"/>
+<byte value="xd"/>
 sACNView must close now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/sacn/streamingacn.cpp" line="218"/>
-        <source>Unable to allocate sender object
-
+        <source>Unable to allocate sender object<byte value="xd"/>
+<byte value="xd"/>
 sACNView must close now</source>
         <translation type="unfinished"></translation>
     </message>

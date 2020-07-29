@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>733</width>
-    <height>512</height>
+    <width>767</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -190,7 +190,7 @@
        <item>
         <widget class="QGroupBox" name="gbSsACNPassword">
          <property name="title">
-          <string>Secure sACN Password (max 32 characters)</string>
+          <string>Pathway ssACN Password (max 32 characters)*</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>

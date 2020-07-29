@@ -18,6 +18,7 @@
 #include <QPointF>
 #include <QDebug>
 #include "sacn/sacnlistener.h"
+#include <QPainterPath>
 
 #define AXIS_WIDTH 50
 #define TOP_GAP 10
