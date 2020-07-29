@@ -68,7 +68,7 @@ Section CheckAdmin
 isNotAdmin:
 	DetailPrint "Missing Administrator Rights !!!"
 	messageBox MB_OK "You do not have Administrator rights on this computer.$\r$\r\
-Please log in as an administrator to install Secure sACNView."
+Please log in as an administrator to install ssACNView."
 	quit
 isAdmin:
 	DetailPrint "Administrator Rights granted"
@@ -141,12 +141,12 @@ Function .onInit
 		;check the Windows version
 		${If} ${TARGET_WINXP} == '1'
 			${IfNot} ${IsWinXP}
-			MessageBox MB_OK "Windows XP is required to run this special build of Secure sACNView"
+			MessageBox MB_OK "Windows XP is required to run this special build of ssACNView"
 			Quit
 			${EndIf}
 		${Else}
 			${IfNot} ${AtLeastWin7}
-			MessageBox MB_OK "Windows 7 or above is required to run Secure sACNView"
+			MessageBox MB_OK "Windows 7 or above is required to run ssACNView"
 			Quit
 			${EndIf}
 		${EndIf}

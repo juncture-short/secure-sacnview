@@ -46,7 +46,7 @@ static const QString S_TX_RATE_OVERRIDE("TX Rate Override");
 static const QString S_LOCALE("LOCALE");
 static const QString S_UNIVERSESLISTED("Universe List Count");
 static const QString S_PRIORITYPRESET("PriorityPreset %1");
-static const QString S_SSACNPASSWORD("Secure sACN Password");
+static const QString S_SSACNPASSWORD("Pathway ssACN Password");
 
 struct MDIWindowInfo
 {
